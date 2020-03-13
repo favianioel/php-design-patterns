@@ -4,11 +4,11 @@ final class Singleton
 {
 	private static $instance;
 
-	/**
-	 * gets the instance via lazy initialization (created on first usage)
-	 *
-	 * @return Training
-	 */
+    /**
+     * gets the instance via lazy initialization (created on first usage)
+     *
+     * @return Singleton
+     */
 	public static function getInstance(): Singleton
 	{
 		if (null === static::$instance) {
@@ -37,11 +37,11 @@ final class Singleton
 	}
 
 	/**
-	 * prevent from being unserialized (which would create a second instance of it)
+	 * prevent from being unsterilized (which would create a second instance of it)
 	 *
 	 * @return void
 	 */
 	private function __wakeup()
-	{
-	}
+    {
+    }
 }
